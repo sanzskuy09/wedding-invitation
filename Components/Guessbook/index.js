@@ -12,11 +12,11 @@ import Image from "next/image";
 import { Fade, Slide } from "react-awesome-reveal";
 
 const Guessbook = () => {
-  const [wish, setWish] = useState([]);
+  const [text, setText] = useState([]);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
-    wishes: "",
+    wish: "",
     ip: "",
   });
 
@@ -33,17 +33,17 @@ const Guessbook = () => {
     getData();
   }, []);
 
-  const { name, wishes, ip } = form;
+  const { name, wish, ip } = form;
 
   const loadWishes = async () => {
     try {
       setLoading(true);
 
-      const responseWishes = await API.get("/wishes");
+      const responseWishes = await API.get("/text");
 
       const res = responseWishes?.data?.data?.wishes;
 
-      setWish(res);
+      setText(res);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -70,14 +70,14 @@ const Guessbook = () => {
 
       const body = JSON.stringify({
         name,
-        wishes,
+        wish,
         ip,
       });
 
       setForm({
         ...form,
         name: "",
-        wishes: "",
+        wish: "",
       });
       Swal.fire({
         title: "Are you sure?",
@@ -90,11 +90,11 @@ const Guessbook = () => {
       }).then(async (result) => {
         try {
           if (result.isConfirmed) {
-            const res = await API.post("/wish/add", body, config);
+            const res = await API.post("/text/add", body, config);
 
-            const newWish = res.data.data.addWish;
+            const newText = res.data.data.addWish;
 
-            setWish([...wish, newWish]);
+            setText([...text, newText]);
 
             Swal.fire("Success!", "Terima Kasih Atas Ucapannya.", "success");
           }
@@ -163,11 +163,11 @@ const Guessbook = () => {
               <Spinner animation="grow" variant="danger" />
             </div>
           ) : (
-            wish.map((e) => (
-              <Slide cascade delay={300} triggerOnce>
+            text?.map((e) => (
+              <Slide cascade delay={300} triggerOnce key={e.id}>
                 <div className={styles["wish-card"]}>
                   <h4 className={styles.h4}>{e.name}</h4>
-                  <p className={styles.p}>{e.wishes}</p>
+                  <p className={styles.p}>{e.wish}</p>
                 </div>
               </Slide>
             ))
@@ -177,31 +177,37 @@ const Guessbook = () => {
         {/* form Wishes */}
 
         <div className={styles.input}>
-          <form onSubmit={(e) => onSubmit(e)} id="wish" className={styles.form}>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => onChange(e)}
-              placeholder="Nama"
-              className={styles["input-text"]}
-            />
-            <textarea
-              name="wishes"
-              value={wishes}
-              onChange={(e) => onChange(e)}
-              rows="2"
-              placeholder="Write a message.."
-              className={styles["input-textarea"]}
-            />
-            <input
-              type="submit"
-              className={styles["input-submit"]}
-              value="Kirim"
-              disabled={!name || !wishes ? true : false}
-            ></input>
-            {/* <pre>{JSON.stringify(form, null, 2)}</pre> */}
-          </form>
+          <Fade delay={500} triggerOnce>
+            <form
+              onSubmit={(e) => onSubmit(e)}
+              id="wish"
+              className={styles.form}
+            >
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => onChange(e)}
+                placeholder="Nama"
+                className={styles["input-text"]}
+              />
+              <textarea
+                name="wish"
+                value={wish}
+                onChange={(e) => onChange(e)}
+                rows="2"
+                placeholder="Write a message.."
+                className={styles["input-textarea"]}
+              />
+              <input
+                type="submit"
+                className={styles["input-submit"]}
+                value="Kirim"
+                disabled={!name || !wish ? true : false}
+              ></input>
+              {/* <pre>{JSON.stringify(form, null, 2)}</pre> */}
+            </form>
+          </Fade>
         </div>
       </div>
     </>

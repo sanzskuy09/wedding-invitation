@@ -18,19 +18,23 @@ import { useState } from "react";
 
 import { Modal } from "react-bootstrap";
 
-import ReactAudioPlayer from "react-audio-player";
-
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
+
+import ReactAudioPlayer from "react-audio-player";
 
 export default function Home() {
   const values = true;
+  const [play, setPlay] = useState(false);
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(true);
 
   function handleShowOff() {
+    setPlay(true);
     setFullscreen(false);
     setShow(false);
   }
+
+  console.log("play", play);
 
   return (
     <div>
@@ -64,12 +68,18 @@ export default function Home() {
       </Modal>
 
       <main>
-        {/* <ReactAudioPlayer
-          src="/Assets/song.mp3"
-          autoPlay="true"
-          loop={true}
-          volume={0.3}
-        /> */}
+        {play ? (
+          <div>
+            <ReactAudioPlayer
+              src="/Assets/song.mp3"
+              autoPlay="true"
+              loop={true}
+              volume={0.3}
+            />
+          </div>
+        ) : (
+          ""
+        )}
 
         <Header />
         <Opening />

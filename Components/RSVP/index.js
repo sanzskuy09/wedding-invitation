@@ -111,44 +111,46 @@ const RVSP = () => {
           </p>
         </Fade>
         <div className={styles.input}>
-          <form onSubmit={(e) => onSubmit(e)} className={styles.form}>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={(e) => onChange(e)}
-              placeholder="Nama Lengkap"
-              className={styles["input-text"]}
-            />
-            <textarea
-              name="address"
-              value={address}
-              onChange={(e) => onChange(e)}
-              rows="2"
-              placeholder="Alamat"
-              className={styles["input-textarea"]}
-            />
-            <select
-              name="is_come"
-              value={is_come}
-              onChange={(e) => onChange(e)}
-              id="absen"
-              className={styles["input-select"]}
-            >
-              <option defaultValue="Apakah anda akan hadir?">
-                Apakah anda akan hadir?
-              </option>
-              <option value="present">Iya, bisa</option>
-              <option value="absent">Maaf, tidak bisa!</option>
-            </select>
-            <input
-              type="submit"
-              value="Submit"
-              className={styles["input-submit"]}
-              disabled={!name || !address || !is_come ? true : false}
-            ></input>
-            {/* <pre>{JSON.stringify(form, null, 2)}</pre> */}
-          </form>
+          <Fade delay={800} triggerOnce>
+            <form onSubmit={(e) => onSubmit(e)} className={styles.form}>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => onChange(e)}
+                placeholder="Nama Lengkap"
+                className={styles["input-text"]}
+              />
+              <textarea
+                name="address"
+                value={address}
+                onChange={(e) => onChange(e)}
+                rows="2"
+                placeholder="Alamat"
+                className={styles["input-textarea"]}
+              />
+              <select
+                name="is_come"
+                value={is_come}
+                onChange={(e) => onChange(e)}
+                id="absen"
+                className={styles["input-select"]}
+              >
+                <option defaultValue="Apakah anda akan hadir?">
+                  Apakah anda akan hadir?
+                </option>
+                <option value="present">Iya, bisa</option>
+                <option value="absent">Maaf, tidak bisa!</option>
+              </select>
+              <input
+                type="submit"
+                value="Submit"
+                className={styles["input-submit"]}
+                disabled={!name || !address || !is_come ? true : false}
+              ></input>
+              {/* <pre>{JSON.stringify(form, null, 2)}</pre> */}
+            </form>
+          </Fade>
         </div>
       </div>
     </>

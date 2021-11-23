@@ -23,14 +23,16 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   /* background-color: red; */
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
+  width: 90vw;
+  max-width: 600px;
 }
 
 .input-text,

@@ -7,8 +7,8 @@ const Schedule = () => {
     <>
       <div className={styles["section-image"]}>
         <div className={styles.section}>
-          <Slide triggerOnce>
-            <div className={styles.card}>
+          <div className={styles.card}>
+            <Slide triggerOnce>
               <h1 className={styles.h1}>Akad Nikah</h1>
               <div className={styles.hr}></div>
               <div className={styles.text}>
@@ -33,9 +33,11 @@ const Schedule = () => {
                   View Location
                 </button>
               </a>
-            </div>
+            </Slide>
+          </div>
 
-            <div className={styles.card}>
+          <div className={styles.card}>
+            <Slide triggerOnce>
               <h1 className={styles.h1}>Resepsi</h1>
               <div className={styles.hr}></div>
               <div className={styles.text}>
@@ -64,8 +66,8 @@ const Schedule = () => {
                   View Location
                 </button>
               </a>
-            </div>
-          </Slide>
+            </Slide>
+          </div>
 
           <Slide delay={500} triggerOnce>
             <p
