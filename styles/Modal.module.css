@@ -12,7 +12,7 @@
   width: 100%;
 
   /* Background */
-  background: url("/assets/Background.png") center center / cover no-repeat;
+  background: url("/Assets/Background.png") center center / cover no-repeat;
 }
 
 .text-modal {
