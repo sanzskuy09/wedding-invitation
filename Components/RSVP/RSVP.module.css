@@ -1,0 +1,88 @@
+.section {
+  margin: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 30px 10px;
+  /* background-color: salmon; */
+}
+
+.h1 {
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+}
+
+.p {
+  max-width: 600px;
+  margin-bottom: 35px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  /* background-color: red; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-text,
+.input-textarea,
+.input-select {
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #707070;
+  color: #707070;
+}
+
+.input-text:focus,
+.input-textarea:focus,
+.input-select:focus {
+  outline: none !important;
+  border-color: #fb908b;
+  box-shadow: 0 0 5px #fb908b;
+}
+
+.input-text {
+  padding: 20px 10px;
+}
+
+.input-textarea {
+  height: auto;
+  padding: 10px;
+}
+
+.input-select {
+  padding: 0px 10px;
+  background-color: #fff;
+}
+
+.input-submit {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  align-self: center;
+  background-color: #707070;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.input-submit:hover {
+  opacity: 1;
+}
+
+.input-submit:disabled,
+.input-submit:disabled:hover {
+  cursor: no-drop;
+}

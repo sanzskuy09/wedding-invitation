@@ -1,0 +1,46 @@
+.section-image {
+  background: url("/Assets/Frame4.png") no-repeat center;
+  background-size: 100vw 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 70px 20px;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.h1 {
+  font-size: 32px;
+  font-family: "Sahitya", serif;
+  margin-bottom: 20px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.wrapper {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-text {
+    width: 60vw;
+  }
+
+  .wrapper {
+    margin-bottom: 0;
+  }
+}

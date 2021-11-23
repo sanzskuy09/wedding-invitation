@@ -1,0 +1,117 @@
+.section {
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 48px;
+  font-family: "Sacramento", cursive;
+  font-weight: 600;
+}
+
+.h5 {
+  font-size: 20px;
+  font-family: "Romanesco", cursive;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 180px;
+  height: 35px;
+  background-color: #fff;
+  color: #fb908b;
+  border: 1px solid #fb908b;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wish-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 20px;
+  border: 1px solid #fb908b;
+  border-radius: 10px;
+  padding: 15px;
+  width: 90vw;
+  max-width: 700px;
+}
+
+.h4 {
+  font-size: 18px;
+}
+
+.p {
+  font-size: 16px;
+  color: #707070;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.form {
+  display: flex;
+  justify-self: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-text,
+.input-textarea {
+  height: 40px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  border: 1px solid #fb908b;
+  color: #707070;
+}
+
+.input-text:focus,
+.input-textarea:focus {
+  outline: none !important;
+  border-color: #fb908b;
+  box-shadow: 0 0 5px #fb908b;
+}
+
+.input-text {
+  padding: 20px 10px;
+}
+
+.input-textarea {
+  height: auto;
+  padding: 10px;
+}
+
+.input-submit {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  align-self: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #fb908b;
+  transition: 0.3s;
+}
+
+.input-submit:hover {
+  background-color: #fb908b;
+  color: #fff;
+}
+
+.input-submit:disabled,
+.input-submit:disabled:hover {
+  cursor: no-drop;
+  background-color: #fff;
+  color: #fb908b;
+}

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Sanchez&display=swap");
+
+.section {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 1px 10px 10px 4px #fb908b40;
+  margin-bottom: 30px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.h2 {
+  font-size: 24px;
+  font-family: "Sanchez", serif;
+  margin-bottom: 20px;
+  color: #fb908b;
+}
+
+.p {
+  width: 250px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card {
+    width: 47vw;
+  }
+}

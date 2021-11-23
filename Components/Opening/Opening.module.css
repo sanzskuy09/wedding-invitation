@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Satisfy&display=swap");
+
+.section-image {
+  background: url("/Assets/Frame1.png") no-repeat;
+  background-size: 100vw 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0;
+}
+
+.section-text {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 365px) and (max-width: 400px) {
+  .section-image {
+    border-radius: 10px 10px 0 0;
+  }
+}

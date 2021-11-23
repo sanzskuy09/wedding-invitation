@@ -1,0 +1,74 @@
+.section-image {
+  background: url("/Assets/Frame2.png") no-repeat;
+  background-size: 100vw 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 0 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px 30px 15px;
+  border-radius: 20px;
+  margin: 30px 0 20px 0;
+}
+
+.hr {
+  border: 10px dotted #fb908b;
+  border-style: none none dotted;
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fb908b;
+  width: 197px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  margin-top: 15px;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.h1 {
+  font-size: 36px;
+  font-family: "Sanchez", serif;
+  color: #fb908b;
+}
+
+.text {
+  width: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .section-image {
+    padding: 50px 40px 0 40px;
+  }
+
+  .button {
+    width: 250px;
+  }
+}
