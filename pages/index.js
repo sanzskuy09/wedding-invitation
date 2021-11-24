@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 import styleModal from "../styles/Modal.module.css";
 
 import Header from "../Components/Header";
@@ -22,7 +24,11 @@ import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 import ReactAudioPlayer from "react-audio-player";
 
-export default function Home() {
+export default function Home({ url }) {
+  const router = useRouter();
+  const { u } = router.query;
+  console.log("url", u);
+
   const values = true;
   const [play, setPlay] = useState(false);
   const [fullscreen, setFullscreen] = useState(true);
@@ -49,7 +55,7 @@ export default function Home() {
         <Modal.Body className={styleModal["container-modal"]}>
           <div className={styleModal["text-modal"]}>
             <Fade cascade>
-              <h3 className={styleModal.h3}>Dear Saudara/i & Kerabat</h3>
+              <h3 className={styleModal.h3}>Dear {u}</h3>
               <h2 className={styleModal.h2}>You Are Invited!</h2>
               <h3 className={styleModal.h3}>The Weeding Celebration of</h3>
               <h1 className={styleModal.h1}>Ihsan & Mila</h1>
