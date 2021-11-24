@@ -37,7 +37,7 @@ const Profile = () => {
               </div>
               <h2 className={styles.h2}>Nur Mila Dianti</h2>
               <p className={styles.p}>
-                Putra Pertama dari Bapak Dwi Tono & Ibu Nur Laila
+                Putri Pertama dari Bapak Dwi Tono & Ibu Nur Laila
               </p>
               <a rel="noopener noreferrer" style={{ cursor: "no-drop" }}>
                 <img src="/Assets/instagram.svg" alt="instagram" />
