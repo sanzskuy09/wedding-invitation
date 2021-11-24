@@ -59,7 +59,7 @@ export default function Home({ url }) {
               <h2 className={styleModal.h2}>You Are Invited!</h2>
               <h3 className={styleModal.h3}>The Weeding Celebration of</h3>
               <h1 className={styleModal.h1}>Ihsan & Mila</h1>
-              <a href="#" style={{ textDecoration: "none" }}>
+              <a style={{ textDecoration: "none" }}>
                 <button
                   className={styleModal.button}
                   onClick={() => handleShowOff(values)}
