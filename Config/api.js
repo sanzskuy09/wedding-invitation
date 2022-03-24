@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "https://wedding-ihsan.herokuapp.com/api/v1",
+  // baseURL: "https://wedding-ihsan.herokuapp.com/api/v1",
+  baseURL: "https://localhost:5000/api/v1",
 });
 
 export const setAuthToken = (token) => {
