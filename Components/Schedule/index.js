@@ -45,7 +45,7 @@ const Schedule = () => {
                 <p>
                   Sesi 1 : 08.00 s/d 10.00 WIB <br />
                   Sesi 2 : 10.00 s/d 12.00 WIB <br />
-                  Sesi 3 : 12.00 s/d 14.00 WIB
+                  Sesi 3 : 12.00 s/d 15.00 WIB
                 </p>
                 <p>
                   JL. Garuda Raya, Rt. 002 No.105, Beji Timur, Depok, Jawa Barat
